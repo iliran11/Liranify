@@ -3,5 +3,9 @@
 @tailwind utilities;
 
 ol {
-    list-style: number;
-  }
+  list-style: number;
+}
+
+a {
+  color: blue;
+}
