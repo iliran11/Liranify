@@ -9,3 +9,29 @@ ol {
 a {
   color: blue;
 }
+
+blockquote {
+  padding: 0px 20px;
+  font-size: 150%;
+  font-weight: bold;
+  display: flex;
+  padding-left: 0px;
+}
+
+blockquote::before {
+  content: "❝";
+  font-size: 150%;
+  transform: translateY(15px);
+  padding: 0px 10px;
+  background-color: #87cefa;
+  border-radius: 6px;
+  display: flex;
+  align-self: flex-start;
+  color: white;
+  margin-right: 10px;
+}
+
+img {
+  margin: 10px 0px; /* Optional - creates space between the image and the border */
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); /* Optional - adds a shadow for a 3D effect */
+}

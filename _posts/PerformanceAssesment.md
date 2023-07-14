@@ -1,18 +1,20 @@
 ---
 title: 'LCP Tactics of Steimatzky'
 excerpt: 'A critical analysis of a well-known book chain website performance, focusing on the Largest Contentful Paint (LCP) score and offering strategies for potential improvements.'
-coverImage: '/stimatcky/gauge-header.png'
+coverImage: '/stimatcky/header.png'
 date: '2023-07-13T05:35:07.322Z'
 author:
   name: Liran Cohen
   picture: '/assets/blog/authors/liran-cohen.jpg'
 ogImage:  
-  url: '/stimatcky/gauge-header.png'
+  url: '/stimatcky/header.png'
 ---
 
 # Introduction: Analyzing Website Performance with Developer Tools
 
 Website performance analysis can seem daunting, but it doesn't have to be. This article will show you a practical, hands-on approach using developer tools. We'll delve into key metrics like the Largest Contentful Paint (LCP) and Cumulative Layout Shift (CLS), discuss how to gather and interpret field data, and provide insights on utilizing the Google Chrome User Experience Report (CrUX). Let's dive right in!
+
+![Website can feel fast](/stimatcky/speed-of-light.png)
 
 ## Collecting and Understanding Data with PageSpeed Insights
 
@@ -21,6 +23,8 @@ Website performance analysis can seem daunting, but it doesn't have to be. This 
 Field data is [real-world data collected from actual users interactions with your website](https://research.google/resources/datasets/chrome-user-experience-report/#:~:text=The%20Chrome%20User%20Experience%20Report,how%20users%20experience%20their%20sites.). This data provides insight into how your site performs under various real-world conditions. It's gathered from users who anonymously report performance data through their Chrome browsers. Key metrics to focus on include the Largest Contentful Paint (LCP) and Cumulative Layout Shift (CLS).
 
 PageSpeed Insights also offers lab data, which is collected in a controlled environment using Lighthouse, an open-source, automated tool for improving web page quality. This controlled environment allows for consistent, repeatable tests under predefined conditions such as network throttling to simulate different network speeds, and CPU throttling to simulate various device capabilities.
+
+> Field data is real-world data collected from actual users interactions with your website.
 
 Analyzing both field and lab data can give you a comprehensive understanding of your website's performance. However, it's important to note that the results from lab and field data can greatly vary due to the differences in testing conditions. These discrepancies, and why they occur, will be explored with a real-world example in the next section.
 
@@ -33,9 +37,12 @@ Remember, the objective is to leverage these insights to identify areas where yo
 
 Let's take a real-world example to better understand how we can use the data from PageSpeed Insights. For our case study, we'll look at Steimatzky, a famous Israeli bookstore chain. They have a prominent online presence, with a well-designed website where customers can browse and purchase books. We'll be using PageSpeed Insights to analyze the performance of this website.
 
+> For our case study, we'll look at Steimatzky, a famous Israeli bookstore chain. They have a prominent online presence, with a well-designed website where customers can browse and purchase books
+
 By inputting Steimatzky's URL into PageSpeed Insights, we can get a detailed report on the website's performance, providing both lab and field data. Keep in mind that the results from these two sources can greatly vary due to the differences in testing conditions. Understanding why these discrepancies occur will be our key focus in this section.
 
 So, let's dive into the analysis and see what insights we can gather!
+
 
 ### Field Data: Insights from Real-World User Interactions
 
@@ -55,6 +62,7 @@ Despite the gap between the field data and the lab test results, it's crucial to
 
 In the next sections, we will delve deeper into the possible factors contributing to this gap and explore why, despite the favorable audience with strong network conditions and powerful devices, the website still struggles to meet the recommended LCP goal.
 
+
 ## Analyzing Metrics and Optimizing LCP
 
 In order to address the high LCP and improve the website's performance, it's essential to examine various metrics that can impact LCP. By using Google Chrome DevTools, we can measure and analyze these metrics to identify areas for optimization. Here are the key metrics and steps to consider.
@@ -70,6 +78,8 @@ The document request is the entry point to the process of rendering a page. When
 To begin this analysis, open your browser's Developer Tools. You'll want to focus on the 'Network' tab, and specifically, you'll want to filter for ['doc' type requests](https://developer.chrome.com/docs/devtools/network/#type). This will isolate the requests related to the HTML document that is the starting point of the page load.
 
 ### 3. Analyzing the Size
+> One key aspect of the document request to pay attention to is the size of the document
+
 One key aspect of the document request to pay attention to is the size of the document. The size, as we see, is roughly around 56KB, which falls within the range of reasonable sizes for an HTML document. This size represents the amount of data that had to be downloaded to receive the HTML. Depending on various factors, including your server's location and the user's network speed, the size of your document could impact the time it takes for the main content to become visible, and thus the LCP score. ![The size of the document](/stimatcky/size.png)
 
 ### 4. Verifying the Download Speed
@@ -84,6 +94,8 @@ Remember, assessing the document request is just the beginning. To comprehensive
 
 ### 6. Checking for Blocking Resources
 Checking for Blocking Resources: By viewing the source of the HTML document in the browser, we can identify any resources that might be blocking the rendering of the page. In the 'head' of the document, you may find multiple resources that need to be fetched before the page can start rendering. These are known as 'blocking resources' and they can significantly impact your LCP score.
+
+> In the 'head' of the document, you may find multiple resources that need to be fetched before the page can start rendering
 
 It's worth noting that resources such as CSS and JavaScript are considered 'render-blocking' because the browser must fully download and process these resources before it can begin to render the page. In contrast, resources like images are not render-blocking—they don't prevent the browser from rendering the rest of the page as they download.
 
@@ -117,13 +129,15 @@ It's also important to ensure your images are appropriately sized. Serving overl
 ## Inspecting the Image
 
 1. Obtain the image's address. You can do this by right-clicking on the image and selecting "Copy Image Address".
-2. Go to the address in your browser. Here, you can use Developer Tools to inspect the image's properties, such as its size, which in our case is roughly around 80KB.
-3. Check the format of the image. In our case, this image is not served in a next-gen format.
+2. Go to the address in your browser. Here, you can use Developer Tools to inspect the image's properties, such as its size, which in our case the LCP image is roughly around 80KB.
+> The LCP image is roughly around 80KB
+3. Check the format of the image. The image is not served in a next-gen format.
+> The image is not served in a next-gen format
 4. Consider the potential for optimization. By converting this image to a next-gen format and optimizing its size, we could potentially halve its file size. [There are several free tools available online](https://tinypng.com/) that can help with this image optimization.
 5. Examine the loading strategy for images. There are multiple images on this page, none of them appear to be optimized, and all these images are fetched immediately upon page load. This could significantly overload the user's bandwidth.
 6. [Consider implementing lazy loading](https://developer.mozilla.org/en-US/docs/Web/Performance/Lazy_loading#images_and_iframes). A technique called 'lazy loading', where images are only loaded as they come into the user's viewport, can improve initial page load performance and save data for users who don't scroll all the way down on your page.
 
-##ga Conclusions
+## Conclusions
 
 The process of optimizing a website's performance is a journey, not a destination. By focusing on the Largest Contentful Paint (LCP) score, we can identify potential bottlenecks and take steps to improve our site's performance.
 
