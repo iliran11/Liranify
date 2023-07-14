@@ -1,6 +1,6 @@
 ---
-title: 'LCP Tactics of Steimatzky'
-excerpt: 'A critical analysis of a well-known book chain website performance, focusing on the Largest Contentful Paint (LCP) score and offering strategies for potential improvements.'
+title: 'Analyzing Web Performance: Stimatckey Case Study'
+excerpt: 'In this case study, we embark on a journey to analyze the website performance of a random pick, Stimatckey, a popular book chain. Through a detailed breakdown using developer tools, we assess key metrics, identify performance bottlenecks, and propose actionable optimization strategies. It's a hitchhiker's guide to improving web performance, with practical insights drawn from real-world examples.'
 coverImage: '/stimatcky/header.png'
 date: '2023-07-13T05:35:07.322Z'
 author:
