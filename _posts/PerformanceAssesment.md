@@ -1,6 +1,6 @@
 ---
 title: 'Analyzing Web Performance: Stimatckey Case Study'
-excerpt: 'In this case study, we embark on a journey to analyze the website performance of a random pick, Stimatckey, a popular book chain. Through a detailed breakdown using developer tools, we assess key metrics, identify performance bottlenecks, and propose actionable optimization strategies. It's a hitchhiker's guide to improving web performance, with practical insights drawn from real-world examples.'
+excerpt: 'In this practical analysis, we examine the web performance of Stimatckey, a well-known book chain, using developer tools to dissect key metrics, detect performance issues, and offer optimization strategies.'
 coverImage: '/stimatcky/header.png'
 date: '2023-07-13T05:35:07.322Z'
 author:
