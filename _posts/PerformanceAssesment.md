@@ -22,19 +22,20 @@ Field data is [real-world data collected from actual users interactions with you
 
 PageSpeed Insights also offers lab data, which is collected in a controlled environment using Lighthouse, an open-source, automated tool for improving web page quality. This controlled environment allows for consistent, repeatable tests under predefined conditions such as network throttling to simulate different network speeds, and CPU throttling to simulate various device capabilities.
 
-Analyzing both field and lab data can give you a comprehensive understanding of your website's performance. However, it's important to note that the results from these two data sources can greatly vary due to the differences in testing conditions. These discrepancies, and why they occur, will be explored with a real-world example in the next section.
+Analyzing both field and lab data can give you a comprehensive understanding of your website's performance. However, it's important to note that the results from lab and field data can greatly vary due to the differences in testing conditions. These discrepancies, and why they occur, will be explored with a real-world example in the next section.
 
 Remember, the objective is to leverage these insights to identify areas where your site excels and where improvements might be needed, aiming to enhance the overall user experience.
 
+> it's important to note that the results from lab and field data can greatly vary due to the differences in testing conditions
 ## Real-World Example: Analyzing Performance of Steimatzky's Website
+
+![Steimatzky's chain store](/stimatcky/steimatky.jpg)
 
 Let's take a real-world example to better understand how we can use the data from PageSpeed Insights. For our case study, we'll look at Steimatzky, a famous Israeli bookstore chain. They have a prominent online presence, with a well-designed website where customers can browse and purchase books. We'll be using PageSpeed Insights to analyze the performance of this website.
 
 By inputting Steimatzky's URL into PageSpeed Insights, we can get a detailed report on the website's performance, providing both lab and field data. Keep in mind that the results from these two sources can greatly vary due to the differences in testing conditions. Understanding why these discrepancies occur will be our key focus in this section.
 
 So, let's dive into the analysis and see what insights we can gather!
-
-![Steimatzky's ]  
 
 ### Field Data: Insights from Real-World User Interactions
 
