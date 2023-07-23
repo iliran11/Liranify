@@ -1,5 +1,5 @@
 ---
-title: 'Analyzing Web Performance: Stimatckey Case Study'
+title: 'Analyzing Core web vitals: A Case Study'
 excerpt: 'In this practical analysis, we examine the web performance of Stimatckey, a well-known book chain, using developer tools to dissect key metrics, detect performance issues, and offer optimization strategies.'
 coverImage: '/stimatcky/header.png'
 date: '2023-07-13T05:35:07.322Z'
