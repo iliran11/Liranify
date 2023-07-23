@@ -39,7 +39,7 @@ Let's take a real-world example to better understand how we can use the data fro
 
 > For our case study, we'll look at Steimatzky, a famous Israeli bookstore chain. They have a prominent online presence, with a well-designed website where customers can browse and purchase books
 
-By inputting Steimatzky's URL into PageSpeed Insights, we can get a detailed report on the website's performance, providing both lab and field data. Keep in mind that the results from these two sources can greatly vary due to the differences in testing conditions. Understanding why these discrepancies occur will be our key focus in this section.
+[By inputting Steimatzky's URL](https://www.steimatzky.co.il/) into PageSpeed Insights, we can get a detailed report on the website's performance, providing both lab and field data. Keep in mind that the results from these two sources can greatly vary due to the differences in testing conditions. Understanding why these discrepancies occur will be our key focus in this section.
 
 So, let's dive into the analysis and see what insights we can gather!
 
@@ -72,7 +72,7 @@ In order to address the high LCP and improve the website's performance, it's ess
 Improving the performance of a website is a continuous process, and a key metric to focus on is the Largest Contentful Paint (LCP) score. The LCP score measures the point in the page load timeline when the page's main content has likely loaded—a fast LCP helps reassure the user that the page is useful. Currently, the LCP score for our site is not up to the mark, so we're going to delve deeper into various metrics to understand how we can enhance this.
 
 ### 1. Starting with the Document Request
-The document request is the entry point to the process of rendering a page. When a user navigates to a URL, the browser requests an HTML document, which then initiates a series of network requests for various resources. By examining this initial document request, we can get an insight into the potential bottlenecks affecting our LCP score.
+We will focus [on one of the product pages](https://www.steimatzky.co.il/010032777). The document request is the entry point to the process of rendering a page. When a user navigates to a URL, the browser requests an HTML document, which then initiates a series of network requests for various resources. By examining this initial document request, we can get an insight into the potential bottlenecks affecting our LCP score.
 
 ### 2. Examining the Request
 To begin this analysis, open your browser's Developer Tools. You'll want to focus on the 'Network' tab, and specifically, you'll want to filter for ['doc' type requests](https://developer.chrome.com/docs/devtools/network/#type). This will isolate the requests related to the HTML document that is the starting point of the page load.
