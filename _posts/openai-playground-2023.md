@@ -58,8 +58,6 @@ After experimenting with translations in the Chat Area, users may want to implem
 Extracting the Code
 Clicking the “View Code” button provides the code snippet that corresponds to the translation task set up in the Playground. This snippet can be copied and embedded into a website, app, or other platform, enabling the translation of reviews in real-time.
 
-Example Usage
-Imagine an e-commerce site that wants to display user reviews in different languages. By integrating the code from the Playground, they can automatically translate customer feedback and present it in the preferred language of each visitor. The process might look like this:
 ```
 code ...
 ```
