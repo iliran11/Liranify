@@ -51,7 +51,3 @@ This interactive environment allows users to test and tweak the translation proc
 
 If a different language or specific translation nuance is needed, users can easily modify the instruction in the "System" field and continue experimenting. It's a dynamic space for exploration, fine-tuning, and ultimately building a system that can handle the translation of thousands of reviews.
 
-The Chat Area showcases the AI's responsiveness and adaptability, making it a key component of the Playground experience.
-
-Let me know if you'd like to add more details, examples, or if you want to proceed to the next section!
-
