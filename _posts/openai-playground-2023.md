@@ -59,7 +59,29 @@ Extracting the Code
 Clicking the “View Code” button provides the code snippet that corresponds to the translation task set up in the Playground. This snippet can be copied and embedded into a website, app, or other platform, enabling the translation of reviews in real-time.
 
 ```
-code ...
+import os
+import openai
+
+openai.api_key = os.getenv("OPENAI_API_KEY")
+
+response = openai.ChatCompletion.create(
+  model="gpt-4",
+  messages=[
+    {
+      "role": "system",
+      "content": "You are a bilingual AI translator, translating customer reviews from English to Spanish, maintaining the sentiment and tone of the original text.\" This instruction sets a clear task for the model, guiding it to perform a translation that is both linguistically accurate and contextually nuanced."
+    },
+    {
+      "role": "user",
+      "content": "Translate: 'I love this product. It's exactly what I needed."
+    }
+  ],
+  temperature=1,
+  max_tokens=256,
+  top_p=1,
+  frequency_penalty=0,
+  presence_penalty=0
+)
 ```
 Users can modify the code to fit their specific requirements, customizing the language pairs, handling batch translations, or integrating with existing systems. It’s a flexible and powerful way to take the Playground experimentations and turn them into functional solutions.
 
