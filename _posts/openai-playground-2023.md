@@ -29,7 +29,7 @@ In this guide, we'll explore how to use the OpenAI Playground, focusing on a rea
 
 ### Setting the "System" Field
 
-* The "System" field * is where users can define the task. In this example, the instruction will be: 
+*The "System" field * is where users can define the task. In this example, the instruction will be: 
 ```
 You are a bilingual AI translator, translating customer reviews from English to Spanish, maintaining the sentiment and tone of the original text." This instruction sets a clear task for the model, guiding it to perform a translation that is both linguistically accurate and contextually nuanced.
 ```
