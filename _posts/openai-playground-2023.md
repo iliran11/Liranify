@@ -35,7 +35,7 @@ You are a bilingual AI translator, translating customer reviews from English to 
 ```
 This instruction would set the task for the model, guiding it to perform translation while considering the sentiment and tone.
 
-## Experimenting with the Chat Area
+### Experimenting with the Chat Area
 
 **The Chat Area** is where the magic happens in the OpenAI Playground. Once the task has been defined in the "System" field, users can enter the reviews they wish to translate and observe how the model responds.
 
@@ -51,7 +51,7 @@ This interactive environment allows users to test and tweak the translation proc
 
 If a different language or specific translation nuance is needed, users can easily modify the instruction in the "System" field and continue experimenting. It's a dynamic space for exploration, fine-tuning, and ultimately building a system that can handle the translation of thousands of reviews.
 
-## Sharing the code
+### Sharing the code
 
 After experimenting with translations in the Chat Area, users may want to implement the functionality in their own systems. The OpenAI Playground makes this easy through the “View Code” button.
 
