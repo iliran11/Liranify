@@ -158,6 +158,16 @@ instead of "book."
 book
 ```
 
+#### Examples
+
+| Temperature | Top P | Frequency Penalty | Presence Penalty | Predicted Output |
+|-------------|-------|-------------------|------------------|------------------|
+| High        | High  | Low               | Low              | Creative, varied, and may include uncommon terms or ideas. |
+| Low         | Low   | High              | High             | Deterministic, focused on common terms, with a broad set of concepts. |
+| Low         | High  | Low               | Low              | Predictable, with occasional variation and inclusion of less common ideas. |
+| High        | Low   | High              | High             | Highly creative, while also using a wide vocabulary and ensuring uniqueness. |
+
+
 
 
 
