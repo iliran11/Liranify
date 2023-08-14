@@ -98,3 +98,68 @@ response = openai.ChatCompletion.create(
 Users can modify the code to fit their specific requirements, customizing the language pairs, handling batch translations, or integrating with existing systems. It’s a flexible and powerful way to take the Playground experimentations and turn them into functional solutions.
 
 This part of the Playground process bridges the gap between experimentation and real-world application, showing how the insights and configurations achieved in the Playground can be transferred to actual use cases.
+
+## Parameters
+
+Controlling these parameters is essential for fine-tuning the model's behavior to suit specific needs and applications. By manipulating those settings developers can guide the model to generate translations that reflect the desired tone, style, and context. For example, a more deterministic translation might be preferred for a technical product description, while a more creative approach could be desired for engaging marketing content.
+
+### Temperature
+
+This parameter controls the randomness of the model's responses.
+
+**High value** The output is more creative and might include unexpected twists. Example: Describing a cat, the model might say: 
+```
+A whiskered artist of the night, agile and mysterious, dancing on rooftops."
+```
+**Low value**  output is more deterministic and sticks closely to expected descriptions. Example: Describing a cat, the model might say:
+```
+A small, furry domestic animal, often kept as a pet.
+```
+
+### Top P
+
+Controls the randomness of the text by defining a threshold for selecting the next words; a high value encourages diversity, while a low value narrows the choices.
+
+**High value** The text might contain diverse synonyms and expressions. Example: Describing a beautiful day might include terms like:
+```
+bright,sunny,vivid, and clear.
+```
+
+**Low value** The output is more deterministic. Example: Describing a beautiful day might consistently use the word:
+```
+sunny.
+```
+
+### Presence Penality
+Influences the repetition of terms; a high value discourages repetition, while a low value allows or encourages it.
+
+**High value** The model ensures a broader set of vocabulary and concepts. Example: In describing a vacation, the model might provide a wide variety of experiences like:
+```
+exploring the city, hiking in the mountains, swimming in the ocean, dining at local restaurants.
+```
+ without focusing or repeating any single aspect.
+
+**Low value** The model repeats terms or phrases. Example: Emphasizing the importance of hygiene, the model might repeatedly stress: 
+```
+washing hands.
+```
+
+### Frequntly penality
+Manages the use of common words; a high value penalizes frequently occurring words, promoting uniqueness, while a low value permits common language.
+
+**High value** The text might contain less common words. Example: Describing a book, the model might use:
+```
+tome, volume 
+```
+instead of "book."
+
+**Low value** The output sticks to more common and frequently used words. Example: Describing a book, the model consistently uses the word:
+```
+book
+```
+
+
+
+
+
+
