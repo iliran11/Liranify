@@ -51,6 +51,18 @@ This interactive environment allows users to test and tweak the translation proc
 
 If a different language or specific translation nuance is needed, users can easily modify the instruction in the "System" field and continue experimenting. It's a dynamic space for exploration, fine-tuning, and ultimately building a system that can handle the translation of thousands of reviews.
 
+### Retrieving Your API Token
+
+Before you start experimenting with the code, there's one essential step to take care of: retrieving your API token. Since each interaction with OpenAI's API needs to be monitored and may be charged, OpenAI requires identifying who is making the request.
+
+Here's how you can retrieve your token:
+
+1. Go to Your Profile: On the OpenAI Platform, navigate to the top right and click on your profile picture.
+2. View API Keys: Click on "View API Keys" to see a list of your existing keys.
+3. Create a New Secret API Key: Click on "Create New Secret API" to generate a new unique API token. This is a sensitive key that links all requests to your account, so handle it with care.
+This token is vital for authenticating your requests and tracking usage. It ensures that your interactions with the API are secure and attributed to your account, allowing for a seamless transition from the Playground to a production environment.
+
+
 ### Sharing the code
 
 After experimenting with translations in the Chat Area, users may want to implement the functionality in their own systems. The OpenAI Playground makes this easy through the “View Code” button.
