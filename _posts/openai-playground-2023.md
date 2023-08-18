@@ -19,7 +19,7 @@ In this guide, we'll explore how to use the OpenAI Playground, focusing on a rea
 
 1. Navigate to the OpenAI Playground: Open your web browser and enter the following link: [https://platform.openai.com/playground.](https://platform.openai.com/playground  )
 2. Sign Up or Sign In Page: Upon reaching the site, you will be prompted to either sign up for a new account or sign in if you already have one.
-![Openai sign-up page](/openai-playground/open-ai-login.png)
+![Openai sign-up page](/openai-playground/authentication.png)
 3. Sign Up Using Google Account: As a new user, click on the "Sign Up" option. To make the process simpler, choose to sign up with your Google account.
 ![Sign up with Google](/openai-playground/google-sign-up.png)
 
@@ -33,6 +33,8 @@ In this guide, we'll explore how to use the OpenAI Playground, focusing on a rea
 ```
 You are a bilingual AI translator, translating customer reviews from English to Spanish, maintaining the sentiment and tone of the original text." This instruction sets a clear task for the model, guiding it to perform a translation that is both linguistically accurate and contextually nuanced.
 ```
+
+![The system field of OpenAi playground](/openai-playground/system.png)
 This instruction would set the task for the model, guiding it to perform translation while considering the sentiment and tone.
 
 ### Experimenting with the Chat Area
@@ -47,6 +49,7 @@ The model, understanding its translation task from the "System" instruction, wou
 ```
 Model: "Traducir: 'Me encanta este producto. Es exactamente lo que necesitaba.'"
 ```
+![The chat area of OpenAi playground](/openai-playground/chat.png)
 This interactive environment allows users to test and tweak the translation process in real-time. Multiple reviews can be entered sequentially, and the model will continue to translate them according to the initial instruction.
 
 If a different language or specific translation nuance is needed, users can easily modify the instruction in the "System" field and continue experimenting. It's a dynamic space for exploration, fine-tuning, and ultimately building a system that can handle the translation of thousands of reviews.
@@ -59,13 +62,15 @@ Here's how you can retrieve your token:
 
 1. Go to Your Profile: On the OpenAI Platform, navigate to the top right and click on your profile picture.
 2. View API Keys: Click on "View API Keys" to see a list of your existing keys.
-3. Create a New Secret API Key: Click on "Create New Secret API" to generate a new unique API token. This is a sensitive key that links all requests to your account, so handle it with care.
+![Menu option to view your API tokens for OpenAI](/openai-playground/view-api-token.png)
+3. Create a New Secret API Key: Click on "Create New Secret API" to generate a new unique API token. ![Create a new key for OpenAI](/openai-playground/create-key.png) This is a sensitive key that links all requests to your account, so handle it with care.
 This token is vital for authenticating your requests and tracking usage. It ensures that your interactions with the API are secure and attributed to your account, allowing for a seamless transition from the Playground to a production environment.
 
 
 ### Sharing the code
 
 After experimenting with translations in the Chat Area, users may want to implement the functionality in their own systems. The OpenAI Playground makes this easy through the “View Code” button.
+![Share the code of your experimantion in OpenAi playground](/openai-playground/share-code.png)
 
 Extracting the Code
 Clicking the “View Code” button provides the code snippet that corresponds to the translation task set up in the Playground. This snippet can be copied and embedded into a website, app, or other platform, enabling the translation of reviews in real-time.
@@ -103,6 +108,7 @@ This part of the Playground process bridges the gap between experimentation and 
 
 Controlling these parameters is essential for fine-tuning the model's behavior to suit specific needs and applications. By manipulating those settings developers can guide the model to generate translations that reflect the desired tone, style, and context. For example, a more deterministic translation might be preferred for a technical product description, while a more creative approach could be desired for engaging marketing content.
 
+![Parameters are an important part in controlling the output of the playground](/openai-playground/parameters.png)
 ### Temperature
 
 This parameter controls the randomness of the model's responses.
