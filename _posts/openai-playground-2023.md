@@ -30,7 +30,7 @@ In this guide, we'll explore how to use the OpenAI Playground, focusing on a rea
 ### Setting the "System" Field
 
 **The "System" field** is where users can define the task. In this example, the instruction will be: 
-```
+```text
 You are a bilingual AI translator, translating customer reviews from English to Spanish, maintaining the sentiment and tone of the original text." This instruction sets a clear task for the model, guiding it to perform a translation that is both linguistically accurate and contextually nuanced.
 ```
 
@@ -42,11 +42,11 @@ This instruction would set the task for the model, guiding it to perform transla
 **The Chat Area** is where the magic happens in the OpenAI Playground. Once the task has been defined in the "System" field, users can enter the reviews they wish to translate and observe how the model responds.
 
 For example, a user might enter:
-```
+```text
 User: "Translate: 'I love this product. It's exactly what I needed.'"
 ```
 The model, understanding its translation task from the "System" instruction, would then respond with:
-```
+```text
 Model: "Traducir: 'Me encanta este producto. Es exactamente lo que necesitaba.'"
 ```
 ![The chat area of OpenAi playground](/openai-playground/chat.png)
@@ -75,7 +75,7 @@ After experimenting with translations in the Chat Area, users may want to implem
 Extracting the Code
 Clicking the “View Code” button provides the code snippet that corresponds to the translation task set up in the Playground. This snippet can be copied and embedded into a website, app, or other platform, enabling the translation of reviews in real-time.
 
-```
+```python
 import os
 import openai
 
@@ -114,11 +114,11 @@ Controlling these parameters is essential for fine-tuning the model's behavior t
 This parameter controls the randomness of the model's responses.
 
 **High value** The output is more creative and might include unexpected twists. Example: Describing a cat, the model might say: 
-```
+```text
 A whiskered artist of the night, agile and mysterious, dancing on rooftops."
 ```
 **Low value**  output is more deterministic and sticks closely to expected descriptions. Example: Describing a cat, the model might say:
-```
+```text
 A small, furry domestic animal, often kept as a pet.
 ```
 
@@ -127,12 +127,12 @@ A small, furry domestic animal, often kept as a pet.
 Controls the randomness of the text by defining a threshold for selecting the next words; a high value encourages diversity, while a low value narrows the choices.
 
 **High value** The text might contain diverse synonyms and expressions. Example: Describing a beautiful day might include terms like:
-```
+```text
 bright,sunny,vivid, and clear.
 ```
 
 **Low value** The output is more deterministic. Example: Describing a beautiful day might consistently use the word:
-```
+```text
 sunny.
 ```
 
@@ -140,13 +140,13 @@ sunny.
 Influences the repetition of terms; a high value discourages repetition, while a low value allows or encourages it.
 
 **High value** The model ensures a broader set of vocabulary and concepts. Example: In describing a vacation, the model might provide a wide variety of experiences like:
-```
+```text
 exploring the city, hiking in the mountains, swimming in the ocean, dining at local restaurants.
 ```
  without focusing or repeating any single aspect.
 
 **Low value** The model repeats terms or phrases. Example: Emphasizing the importance of hygiene, the model might repeatedly stress: 
-```
+```text
 washing hands.
 ```
 
@@ -154,13 +154,13 @@ washing hands.
 Manages the use of common words; a high value penalizes frequently occurring words, promoting uniqueness, while a low value permits common language.
 
 **High value** The text might contain less common words. Example: Describing a book, the model might use:
-```
+```text
 tome, volume 
 ```
 instead of "book."
 
 **Low value** The output sticks to more common and frequently used words. Example: Describing a book, the model consistently uses the word:
-```
+```text
 book
 ```
 
