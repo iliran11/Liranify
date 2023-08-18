@@ -1,13 +1,13 @@
 ---
-title: 'OpenAi playground - 2023 guide'
-excerpt: 'xxxxx'
-coverImage: '/stimatcky/header.png'
-date: '2023-07-13T05:35:07.322Z'
+title: 'How to use OpenAI playground'
+excerpt: 'In this guide, we first explore how to access the OpenAI Playground and engage in basic experimentation. We then advance to more complex topics, delving into the control of model behavior using parameters like Temperature and Top P. These insights unlock the flexibility and potential of the OpenAI API for various applications.'
+coverImage: '/openai-playground/header.png'
+date: '2023-08-20T05:35:07.322Z'
 author:
   name: Liran Cohen
   picture: '/assets/blog/authors/liran-cohen.jpg'
 ogImage:  
-  url: '/stimatcky/header.png'
+  url: '/openai-playground/header.png'
 ---
 
 # How to use OpenAi playground
