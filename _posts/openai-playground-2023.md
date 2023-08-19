@@ -8,6 +8,7 @@ author:
   picture: '/assets/blog/authors/liran-cohen.jpg'
 ogImage:  
   url: '/openai-playground/header.png'
+chat: https://chat.openai.com/c/2b70dab5-22a2-418a-81c2-c5437c22b092
 ---
 
 # How to use OpenAi playground
@@ -167,9 +168,13 @@ book
 ### Examples
 
 **High Temperature, High Top P, Low Frequency Penalty, Low Presence Penalty**: Creative, varied, and may include uncommon terms or ideas.
+
 **Low Temperature, Low Top P, High Frequency Penalty, High Presence Penalty**: Deterministic, focused on common terms, with a broad set of concepts.
+
 **Low Temperature, High Top P, Low Frequency Penalty, Low Presence Penalty**: Predictable, with occasional variation and inclusion of less common ideas.
+
 **High Temperature, Low Top P, High Frequency Penalty, High Presence Penalty**: Highly creative, while also using a wide vocabulary and ensuring uniqueness.
+
 
 ## Closing Chapter: The Power and Promise of the OpenAI Playground
 
