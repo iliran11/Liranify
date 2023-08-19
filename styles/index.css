@@ -35,3 +35,7 @@ img {
   margin: 10px 0px; /* Optional - creates space between the image and the border */
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); /* Optional - adds a shadow for a 3D effect */
 }
+
+code {
+  white-space: pre-wrap;
+}

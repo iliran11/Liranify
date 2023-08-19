@@ -8,6 +8,7 @@ author:
   picture: '/assets/blog/authors/liran-cohen.jpg'
 ogImage:  
   url: '/stimatcky/header.png'
+published: true
 ---
 
 # Introduction: Analyzing Website Performance with Developer Tools
