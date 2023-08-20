@@ -9,6 +9,7 @@ author:
 ogImage:  
   url: '/openai-playground/header.png'
 chat: https://chat.openai.com/c/2b70dab5-22a2-418a-81c2-c5437c22b092
+publishe: true
 ---
 
 # How to use OpenAi playground
