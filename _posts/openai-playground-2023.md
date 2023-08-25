@@ -12,6 +12,22 @@ chat: https://chat.openai.com/c/2b70dab5-22a2-418a-81c2-c5437c22b092
 published: true
 ---
 
+# Table of Contents
+- [How to Access the OpenAI Playground](#how-to-access-the-openai-playground)
+- [Basic Experimentation with the Model](#basic-experimentation-with-the-model)
+  - [Setting the "System" Field](#setting-the-system-field)
+  - [Experimenting with the Chat Area](#experimenting-with-the-chat-area)
+  - [Retrieving Your API Token](#retrieving-your-api-token)
+  - [Sharing the code](#sharing-the-code)
+- [Parameters](#parameters)
+  - [Temperature](#temperature)
+  - [Top P](#top-p)
+  - [Presence Penality](#presence-penality)
+  - [Frequntly penality](#frequntly-penality)
+  - [Examples](#examples)
+- [Closing Chapter: The Power and Promise of the OpenAI Playground](#closing-chapter-the-power-and-promise-of-the-openai-playground)
+
+
 # How to use OpenAi playground
 OpenAI's Playground offers an interactive platform for exploring and experimenting with GPT-4, the leading language model in the world today. Whether you're a professional developer, researcher, or an AI enthusiast, this tool provides a hands-on experience to understand, customize, and create using this groundbreaking technology. In this comprehensive guide, we'll delve into the Playground's features, accessibility, customization options, pricing structure, and ethical considerations, equipping you with everything you need to make the most of this remarkable resource.
 
