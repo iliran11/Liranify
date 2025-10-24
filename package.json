@@ -4,7 +4,8 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "typecheck": "tsc"
+    "typecheck": "tsc",
+    "skill": "cp prompts/prompt-generator.md prompts/SKILL.MD && zip SKILL.zip prompts/SKILL.MD && mv SKILL.zip ~/downloads && rm prompts/SKILL.MD"
   },
   "engines": {
     "node": "22.x"
