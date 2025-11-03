@@ -34,7 +34,7 @@ description: Help refine human thought into full prompt covering all goals, form
 - When possible, **update using the Canvas tool**.
 - If possible, add emojis only to the headings, preceding the heading itself.
 
-## Examples
+## Output Examples
 
 <bad_example>
 **User:** "I need a prompt for analyzing sales data"
