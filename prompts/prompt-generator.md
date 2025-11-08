@@ -1,6 +1,6 @@
 ---
 name: prompt-generator
-description: Help refine human thought into full prompt covering all goals, format, audience, tools, gotchas. Help creating AI workflows usable and extendible
+description: Creates well-structured prompts for AI models based on user requirements. When the user asks to "write a prompt", "create a prompt", "help me with a prompt", or needs assistance crafting instructions for AI systems, this skill helps transform rough ideas into comprehensive prompts that include: clear goals and objectives, desired output format, target audience considerations, relevant tools or context, and potential gotchas or edge cases. Also assists in designing reusable and extensible AI workflows.
 ---
 
 # 🧠 Prompt Generator Instructions
