@@ -2,79 +2,183 @@
 @tailwind components;
 @tailwind utilities;
 
-ol {
-  list-style: number;
+/* Minimal Brutalist Design System */
+
+:root {
+  /* Colors */
+  --black: #000000;
+  --white: #FFFFFF;
+  --pink: #FF3366;
+  --gray-dark: #333333;
+  --gray-medium: #666666;
+  --gray-light: #F5F5F5;
+
+  /* Spacing Scale (multiples of 20px) */
+  --space-xxs: 15px;
+  --space-xs: 20px;
+  --space-s: 30px;
+  --space-m: 40px;
+  --space-l: 60px;
+  --space-xl: 80px;
+}
+
+* {
+  border-radius: 0 !important; /* No rounded corners - brutalist principle */
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: var(--white);
+  color: var(--gray-dark);
+  font-size: 18px;
+  line-height: 1.7;
+  font-weight: 400;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 900;
 }
 
 a {
-  color: blue;
+  color: var(--black);
+  text-decoration: none;
+  transition: all 0.2s;
 }
 
+a:hover {
+  background: var(--black);
+  color: var(--white);
+}
+
+/* Brutalist Buttons/CTAs */
+.brutalist-cta {
+  background: var(--black);
+  color: var(--white);
+  padding: var(--space-xxs) var(--space-s);
+  border: 3px solid var(--black);
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.2s;
+  display: inline-block;
+}
+
+.brutalist-cta:hover {
+  background: var(--white);
+  color: var(--black);
+}
+
+/* Lists */
+ol {
+  list-style: decimal;
+  padding-left: var(--space-m);
+}
+
+ul {
+  list-style: disc;
+  padding-left: var(--space-m);
+}
+
+/* Blockquotes - Brutalist Style */
 blockquote {
-  padding: 0px 20px;
-  font-size: 150%;
-  font-weight: bold;
-  display: flex;
-  padding-left: 0px;
+  padding: var(--space-s);
+  border-left: 8px solid var(--black);
+  background: var(--gray-light);
+  font-size: 24px;
+  font-weight: 900;
+  margin: var(--space-m) 0;
+  text-transform: uppercase;
+  letter-spacing: -1px;
 }
 
-blockquote::before {
-  content: "❝";
-  font-size: 150%;
-  transform: translateY(15px);
-  padding: 0px 10px;
-  background-color: #87cefa;
-  border-radius: 6px;
-  display: flex;
-  align-self: flex-start;
-  color: white;
-  margin-right: 10px;
-}
-
+/* Images - Brutalist Style (no shadows, hard edges) */
 img {
-  margin: 10px 0px; /* Optional - creates space between the image and the border */
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); /* Optional - adds a shadow for a 3D effect */
+  margin: var(--space-xs) 0;
+  border: 2px solid var(--black);
+  width: 100%;
+  height: auto;
 }
 
+/* Code - Brutalist Style */
 code {
   white-space: pre-wrap;
+  background: var(--black);
+  color: var(--white);
+  padding: 2px 8px;
+  font-family: 'Courier New', monospace;
+  font-size: 16px;
+  border: 2px solid var(--black);
+}
+
+pre code {
+  display: block;
+  padding: var(--space-xs);
+  overflow-x: auto;
+}
+
+/* Table of Contents - Brutalist Style */
+#table-of-contents {
+  font-size: 24px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  margin-bottom: var(--space-xs);
 }
 
 #table-of-contents + ul {
   list-style-type: none;
   padding-left: 0;
   margin: 0;
+  background: var(--gray-light);
+  padding: var(--space-s);
+  border: 2px solid var(--black);
 }
 
 #table-of-contents + ul ul {
-  margin: 0;
+  margin: var(--space-xxs) 0;
+  padding-left: var(--space-xs);
 }
 
 #table-of-contents + ul > li {
-  margin: 5px 0;
+  margin: var(--space-xxs) 0;
+  padding: var(--space-xxs) 0;
+  border-bottom: 2px solid #DDDDDD;
+}
+
+#table-of-contents + ul > li:last-child {
+  border-bottom: none;
 }
 
 #table-of-contents + ul > li > a {
-  font-weight: bold;
-  color: #333;
+  font-weight: 700;
+  color: var(--black);
   text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 0.5px;
 }
 
 #table-of-contents + ul a {
-  font-weight: bold;
-  color: #333;
+  font-weight: 700;
+  color: var(--black);
   text-decoration: none;
 }
 
 #table-of-contents + ul > li > ul > li > a {
-  font-weight: normal;
-  margin-left: 20px;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 14px;
 }
 
-#table-of-contents + ul  li > a:hover {
-  color: #007bff;
-}
-
-html {
-  scroll-behavior: smooth;
+#table-of-contents + ul li > a:hover {
+  background: var(--black);
+  color: var(--white);
+  padding: 2px 4px;
 }

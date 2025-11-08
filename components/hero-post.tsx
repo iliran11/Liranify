@@ -22,29 +22,48 @@ const HeroPost = ({
   slug,
 }: Props) => {
   return (
-    <section>
-      <div className="mb-8 md:mb-16">
+    <section style={{ marginBottom: '60px' }}>
+      <div style={{ marginBottom: '20px' }}>
         <CoverImage title={title} src={coverImage} slug={slug} />
       </div>
-      <div className="md:grid md:grid-cols-2 md:gap-x-16 lg:gap-x-8 mb-20 md:mb-28">
-        <div>
-          <h3 className="mb-4 text-4xl lg:text-5xl leading-tight">
-            <Link
-              as={`/posts/${slug}`}
-              href="/posts/[slug]"
-              className="hover:underline"
-            >
-              {title}
-            </Link>
-          </h3>
-          <div className="mb-4 md:mb-0 text-lg">
-            <DateFormatter dateString={date} />
-          </div>
+      <div>
+        <h2
+          style={{
+            fontSize: '42px',
+            fontWeight: 900,
+            letterSpacing: '-1px',
+            lineHeight: '1.1',
+            marginBottom: '15px'
+          }}
+        >
+          <Link
+            as={`/posts/${slug}`}
+            href="/posts/[slug]"
+          >
+            {title}
+          </Link>
+        </h2>
+        <div
+          style={{
+            fontSize: '14px',
+            fontWeight: 700,
+            textTransform: 'uppercase',
+            letterSpacing: '0.5px',
+            color: '#666666',
+            marginBottom: '20px'
+          }}
+        >
+          <DateFormatter dateString={date} />
         </div>
-        <div>
-          <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
-          <Avatar name={author.name} picture={author.picture} />
-        </div>
+        <p style={{
+          fontSize: '18px',
+          lineHeight: '1.7',
+          color: '#333333',
+          marginBottom: '20px'
+        }}>
+          {excerpt}
+        </p>
+        <Avatar name={author.name} picture={author.picture} />
       </div>
     </section>
   )

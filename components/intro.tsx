@@ -1,14 +1,33 @@
-import { CMS_NAME } from "../lib/constants";
-
 const Intro = () => {
   return (
-    <section className="flex-col md:flex-row flex items-center md:justify-between mt-16 mb-16 md:mb-12">
-      <h1 className="text-5xl md:text-8xl font-bold tracking-tighter leading-tight md:pr-8">
-        Liranify
+    <section
+      className="bg-black text-white pt-20 pb-10 px-10"
+      style={{
+        borderBottom: '8px solid #FF3366'
+      }}
+    >
+      <h1
+        className="font-black uppercase"
+        style={{
+          fontSize: '72px',
+          fontWeight: 900,
+          letterSpacing: '-2px',
+          lineHeight: '0.9',
+          marginBottom: '15px'
+        }}
+      >
+        LIRANIFY
       </h1>
-      <h4 className="text-center md:text-left text-lg mt-5 md:pl-8">
+      <p
+        style={{
+          fontSize: '18px',
+          fontWeight: 400,
+          letterSpacing: '0.5px',
+          opacity: 0.8
+        }}
+      >
         Personal insights
-      </h4>
+      </p>
     </section>
   );
 };

@@ -22,25 +22,48 @@ const PostPreview = ({
   slug,
 }: Props) => {
   return (
-    <div>
-      <div className="mb-5">
+    <article style={{ marginBottom: '60px' }}>
+      <div style={{ marginBottom: '20px' }}>
         <CoverImage slug={slug} title={title} src={coverImage} />
       </div>
-      <h3 className="text-3xl mb-3 leading-snug">
+      <h3
+        style={{
+          fontSize: '42px',
+          fontWeight: 900,
+          letterSpacing: '-1px',
+          lineHeight: '1.1',
+          marginBottom: '15px'
+        }}
+      >
         <Link
           as={`/posts/${slug}`}
           href="/posts/[slug]"
-          className="hover:underline"
         >
           {title}
         </Link>
       </h3>
-      <div className="text-lg mb-4">
+      <div
+        style={{
+          fontSize: '14px',
+          fontWeight: 700,
+          textTransform: 'uppercase',
+          letterSpacing: '0.5px',
+          color: '#666666',
+          marginBottom: '20px'
+        }}
+      >
         <DateFormatter dateString={date} />
       </div>
-      <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
+      <p style={{
+        fontSize: '18px',
+        lineHeight: '1.7',
+        color: '#333333',
+        marginBottom: '20px'
+      }}>
+        {excerpt}
+      </p>
       <Avatar name={author.name} picture={author.picture} />
-    </div>
+    </article>
   )
 }
 
