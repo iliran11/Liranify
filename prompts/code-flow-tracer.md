@@ -1,3 +1,9 @@
+---
+name: code-flow-tracer
+description: "Traces code execution flow from entry points to specific functionality. When the user asks to 'trace code flow', 'show how code reaches X', 'map execution path', or needs to understand how a codebase reaches a specific function or feature, this creates a markdown document showing the journey through the code with clickable file references and brief descriptions of each step."
+---
+
+
 # 🎯 Goal
 
 - Trace execution path to a specific point in code
