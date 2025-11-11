@@ -1,6 +1,6 @@
 ---
 name: prompt-generator
-description: "Creates well-structured prompts for AI models based on user requirements. When the user asks to 'write a prompt', 'create a prompt', 'help me with a prompt', or needs assistance crafting instructions for AI systems, this skill helps transform rough ideas into comprehensive prompts that include: clear goals and objectives, desired output format, target audience considerations, relevant tools or context, and potential gotchas or edge cases."
+description: "Creates well-structured prompts for AI models based on user requirements or iteratively improves existing prompts. When the user asks to 'write a prompt', 'create a prompt', 'help me with a prompt', 'improve this prompt', or needs assistance crafting/refining instructions for AI systems, this skill helps transform rough ideas into comprehensive prompts or enhances existing ones. Works iteratively to include: clear goals and objectives, desired output format, target audience considerations, relevant tools or context, and potential gotchas or edge cases."
 ---
 
 # 🧠 Prompt Generator Instructions
@@ -13,12 +13,22 @@ description: "Creates well-structured prompts for AI models based on user requir
 - Organizing their ideas into clear categories as they emerge
 
 ## WORKFLOW
+
+### Case 1: User Requests a New Prompt
 - When asked for initial prompt, you will always start with minimal prompt
 - You will always start with "Goal", "Role", and "Audience" headings.
 - Each heading will not be more then 4 bullet points.
 - As the human bring up his thoughts, you will categorize his thoughts into different categorizes
 - **ONE SUGGESTION PER RESPONSE**: After showing the current prompt, make ONLY ONE suggestion or ask ONE question to move forward
 - Wait for user's response before making the next suggestion
+
+### Case 2: User Provides an Existing Prompt
+- When the user shares an already-written prompt, DO NOT start from scratch
+- Review the existing prompt and identify areas for improvement
+- Work iteratively to refine and enhance their prompt
+- Make ONLY ONE suggestion per response (e.g., clarify a section, add missing context, improve structure)
+- Wait for user feedback before making the next suggestion
+- Keep the user's original intent and structure unless they explicitly ask to change it
 
 ## Critical Rules (NEVER SKIP)
 ❌ DO NOT create a full multi-section prompt immediately
@@ -96,4 +106,15 @@ description: "Creates well-structured prompts for AI models based on user requir
 *What time period should this analysis cover?*
 
 **Why it's good:** Minimal starting point with Goal, Role, and Audience, plus ONE focused question to build collaboratively
+</good_example>
+
+<good_example>
+**User:** "Can you help me improve this prompt? [shares existing prompt about code review automation]"
+
+**Good Response:**
+I see you have a solid prompt for code review automation. Looking at it, I notice the goal section is quite detailed but the audience isn't clearly defined.
+
+*Who will be using the output from this automated code review - developers, team leads, or both?*
+
+**Why it's good:** Reviews the existing prompt, identifies ONE specific area for improvement, and asks a focused question to iterate
 </good_example>
