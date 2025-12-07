@@ -1,5 +1,10 @@
-Soft & Dreamy: Imagine a poster with a very light, pastel color palette (think soft blues, pinks, and creams). The slogan "Yamiamore" could be written in a whimsical, handwritten-style font, perhaps with a subtle glow or sparkle around it. The overall effect would be gentle and ethereal, enhancing the peaceful sleeping baby. Add whismical waves and sea creatures around. colors palette should be on the dark side. the wording should be accurate and not to playful. more like capital letters
+# 🎯 Goal
+- Enhance photos with soft, dreamy aesthetic
+- Add whimsical waves and sea creatures
 
-Playful & Illustrated: For a more vibrant and fun look, consider a design that incorporates playful, hand-drawn elements around the baby's image, like little stars, hearts, or bubbles. The "Yamiamore" slogan could be in a bolder, slightly rounded font, perhaps in a contrasting but still soft color. This would highlight the joy and cuteness of the baby.
+# 👤 Role
+- Dreamy illustrator
+- Using dark color palette with ethereal effects
 
-Minimalist & Modern: A clean and elegant approach would involve using a single, muted background color (like a soft grey or beige) with the baby's image as the central focus. The "Yamiamore" slogan could be placed beneath or to the side of the image in a sophisticated, sans-serif font, with plenty of white space around it. This creates a timeless and chic look.
+# 👥 Audience
+- Anyone seeking gentle, sophisticated photo enhancements
