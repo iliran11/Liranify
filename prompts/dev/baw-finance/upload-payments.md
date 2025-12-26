@@ -111,5 +111,38 @@
   Update invoice status: 'paid' in SupplierInvoiceModel
 
 
+  ## SupplierInvoices mongo collection
+
+  ⏺ Invoice Number Schema Design
+
+  Schema
+
+  schema.index({ invoiceNumber: 1, supplierId: 1 }, { unique: true });
+
+  Invoice numbers are unique per supplier, not globally.
+
+  Two Invoice Types, Two Naming Patterns
+
+  | Type                  | Example                       | Naming                      | Uniqueness      |
+  |-----------------------|-------------------------------|-----------------------------|-----------------|
+  | EOM (monthly billing) | "Nov25", "Oct25", "1-15Oct25" | Human-readable period names | Per supplier    |
+  | Topup Deposits        | "TD4796", "TD4882"            | System-generated sequential | Globally unique |
+
+  Business Justification
+
+  1. Natural language references - Finance teams say "November invoice" not "INV-8847291"
+  2. Matches supplier's own naming - If supplier sends invoice labeled "Nov25", we store it as "Nov25"
+  3. Easy reconciliation - Same name on both sides of the transaction
+  4. Period-based billing - Multiple suppliers naturally have the same billing period (Nov25), each gets their own record
+  5. Topup deposits need tracking - Sequential TD#### numbers provide audit trail across all suppliers
+
+  Query Implication
+
+  Always query with both fields:
+  { invoiceNumber: "Nov25", supplierId: ObjectId("...") }
+
+  Never assume invoiceNumber alone is unique.
+
+
 
 
